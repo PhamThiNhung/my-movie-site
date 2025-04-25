@@ -44,10 +44,14 @@
                     <img src="https://www.youtube.com/watch?v=f9hCvW3A4RU" alt="Phim 3">
                     <h3>Phim 3</h3>
                     <p>Thể loại: Khoa học viễn tưởng</p>
-                    <button class="btn-trailer">Xem Trailer</button>
+                    <button class="btn-trailer" onclick="playTrailer('https://www.youtube.com/embed/f9hCvW3A4RU')">Xem Trailer</button>
                 </div>
             </div>
         </section>
+        <div id="trailer-container" style="display: none; margin-top: 20px; text-align: center;">
+        <h2>Trailer</h2>
+        <iframe id="trailer-video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
     </main>
 
     <!-- Footer -->
