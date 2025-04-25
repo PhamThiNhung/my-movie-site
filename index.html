@@ -1,58 +1,50 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Phim - Phim Mới Nhất</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Trang Web Phim</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .movie {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px;
+      background-color: orange;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #trailer-container {
+      display: none;
+      margin-top: 30px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <h1>Website Phim</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Trang Chủ</a></li>
-                <li><a href="#">Phim Mới</a></li>
-                <li><a href="#">Phim Hot</a></li>
-                <li><a href="#">Liên Hệ</a></li>
-            </ul>
-        </nav>
-    </header>
+  <h1>Danh Sách Phim</h1>
 
-    <!-- Main Content -->
-    <main>
-        <section class="movie-list">
-            <h2>Phim Mới Nhất</h2>
-            <div class="movies">
-                <div class="movie">
-                    <img src="https://via.placeholder.com/200x300" alt="Phim 1">
-                    <h3>Phim 1</h3>
-                    <p>Thể loại: Hành động, Kinh dị</p>
-                    <button class="btn-trailer">Xem Trailer</button>
-                </div>
-                <div class="movie">
-                    <img src="https://via.placeholder.com/200x300" alt="Phim 2">
-                    <h3>Phim 2</h3>
-                    <p>Thể loại: Hài, Lãng mạn</p>
-                    <button class="btn-trailer">Xem Trailer</button>
-                </div>
-                <div class="movie">
-                    <img src="https://www.youtube.com/watch?v=f9hCvW3A4RU" alt="Phim 3">
-                    <h3>Phim 3</h3>
-                    <p>Thể loại: Khoa học viễn tưởng</p>
-                    <button class="btn-trailer" onclick="playTrailer('https://www.youtube.com/embed/f9hCvW3A4RU')">Xem Trailer</button>
-                </div>
-            </div>
-        </section>
-        <div id="trailer-container" style="display: none; margin-top: 20px; text-align: center;">
-        <h2>Trailer</h2>
-        <iframe id="trailer-video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-        </div>
-          <script>
+  <!-- Phim 3 -->
+  <div class="movie">
+    <h3>Phim 3 - Khoa học viễn tưởng</h3>
+    <button onclick="playTrailer('https://www.youtube.com/embed/f9hCvW3A4RU')">Xem Trailer</button>
+  </div>
+
+  <!-- Nơi hiển thị video trailer -->
+  <div id="trailer-container">
+    <h2>Trailer Phim</h2>
+    <iframe id="trailer-video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!-- Script xử lý nhúng video -->
+  <script>
     function playTrailer(videoUrl) {
       const container = document.getElementById('trailer-container');
       const iframe = document.getElementById('trailer-video');
@@ -60,14 +52,7 @@
       container.style.display = "block";
       window.scrollTo(0, container.offsetTop - 50);
     }
-      </script>
-    </main>
+  </script>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Website Phim. Tất cả quyền được bảo vệ.</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
