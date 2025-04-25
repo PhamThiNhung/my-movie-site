@@ -52,6 +52,15 @@
         <h2>Trailer</h2>
         <iframe id="trailer-video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
         </div>
+          <script>
+    function playTrailer(videoUrl) {
+      const container = document.getElementById('trailer-container');
+      const iframe = document.getElementById('trailer-video');
+      iframe.src = videoUrl + "?autoplay=1";
+      container.style.display = "block";
+      window.scrollTo(0, container.offsetTop - 50);
+    }
+      </script>
     </main>
 
     <!-- Footer -->
