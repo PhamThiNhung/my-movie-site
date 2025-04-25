@@ -28,15 +28,25 @@
   </style>
 </head>
 <body>
-
-  <h1>Danh Sách Phim</h1>
+<section class="movie-list">
+  <h3>Danh Sách Phim</h3>
+    <!-- Phim 1 -->
+  <div class="movie-item">
+    <h1>Phim 1 - Hành động, kịch tính </h1>
+    <button onclick>Xem Trailer</button>
+  </div>
+    <!-- Phim 2 -->
+  <div class="movie-item">
+    <h2>Phim 2 - Tâm lý xã hội </h2>
+    <button onclick>Xem Trailer</button>
+  </div>
 
   <!-- Phim 3 -->
-  <div class="movie">
+  <div class="movie-item">
     <h3>Phim 3 - Khoa học viễn tưởng</h3>
     <button onclick="playTrailer('https://www.youtube.com/embed/f9hCvW3A4RU')">Xem Trailer</button>
   </div>
-
+</section>
   <!-- Nơi hiển thị video trailer -->
   <div id="trailer-container">
     <h2>Trailer Phim</h2>
